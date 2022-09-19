@@ -9,9 +9,10 @@ job('First-Maven-Project-Via-DSL') {
     steps {
 	maven {
 		mavenInstallation('Local Maven')
+		goals('clean')
+		goals('package')
 	}
-	maven('clean package')
-	
+
     }
     publishers {
         //archive the war file generated
